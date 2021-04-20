@@ -1,0 +1,49 @@
+{
+  "name": "caba-diario-front-end",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^22.0.0",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "materialize-css": "^1.0.0",
+    "moment": "^2.29.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-html-parser": "^2.0.2",
+    "react-materialize": "^3.9.8",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.4",
+    "sweetalert2": "^9.17.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@zeit/next-css": "^1.0.1"
+  }
+}
