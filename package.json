@@ -1,4 +1,5 @@
 {
+  "homepage": "https://martindanielcp.github.io/CABA-Diario-Frontend/",
   "name": "caba-diario-front-end",
   "version": "0.1.0",
   "private": true,
@@ -23,6 +24,8 @@
     "sweetalert2": "^9.17.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@zeit/next-css": "^1.0.1"
+    "@zeit/next-css": "^1.0.1",
+    "gh-pages": "^3.1.0"
   }
 }
