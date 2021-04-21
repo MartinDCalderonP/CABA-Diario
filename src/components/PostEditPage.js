@@ -98,6 +98,8 @@ export default (props)=>{
 
     let {id}=useParams();
 
+    let baseURL='https://caba-diario-backend.herokuapp.com';
+
     useEffect(
         ()=>{
             fetch(`${baseURL}/secciones`).then(
