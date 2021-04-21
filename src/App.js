@@ -23,7 +23,7 @@ function App() {
     setUsuario(loggedUser);
   }
 
-  let baseURL='https://caba-diario-backend.herokuapp.com;
+  let baseURL='https://caba-diario-backend.herokuapp.com';
 
   const onLogout=()=>{
     let url=`${baseURL}/auth`;
