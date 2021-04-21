@@ -58,7 +58,7 @@ export default (props)=>{
 
     const [notas, setNotas]=useState([]);
 
-    let url = `http://localhost:8888/notas/${endpoint}`;
+    let url = `https://caba-diario-backend.herokuapp.com/notas/${endpoint}`;
 
     useEffect(
         ()=>{
