@@ -55,7 +55,9 @@ export default (props)=>{
         formData.append('Crédito_de_Imagen', créditoDeImagen);
         formData.append('Texto', texto);
 
-        let url='http://localhost:8888/notas';
+        let baseURL='https://caba-diario-backend.herokuapp.com';
+
+        let url=`${baseURL}/notas`;
 
         let method='POST';
 
@@ -98,7 +100,7 @@ export default (props)=>{
 
     useEffect(
         ()=>{
-            fetch('http://localhost:8888/secciones').then(
+            fetch(`${baseURL}/secciones`).then(
                 response => response.json()
             ).then(
                 data =>{
@@ -107,7 +109,7 @@ export default (props)=>{
             )
 
             id &&
-                fetch('http://localhost:8888/notas/autor/todas/' + id).then(
+                fetch(`${baseURL}/notas/autor/todas/` + id).then(
                     response=>response.json()
                 ).then(
                     data=>{

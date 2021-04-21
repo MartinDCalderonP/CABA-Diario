@@ -29,6 +29,8 @@ export default (props)=>{
         setContraseñaRepetida(event.target.value);
     }
 
+    let baseURL='https://caba-diario-backend.herokuapp.com';
+
     const handleRegisterClick=()=>{
         const formData=new FormData();
 
@@ -36,7 +38,7 @@ export default (props)=>{
         formData.append('Correo', correo);
         formData.append('Contraseña', contraseña);
         
-        let url='http://localhost:8888/register/usuarios';
+        let url=`${baseURL}/register/usuarios`;
 
         fetch(url, {
             method: 'POST',

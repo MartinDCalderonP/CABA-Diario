@@ -23,8 +23,10 @@ function App() {
     setUsuario(loggedUser);
   }
 
+  let baseURL='https://caba-diario-backend.herokuapp.com;
+
   const onLogout=()=>{
-    let url='http://localhost:8888/auth';
+    let url=`${baseURL}/auth`;
 
     fetch(url, {
       method: 'DELETE',

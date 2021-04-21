@@ -9,9 +9,11 @@ import ThemeSwitch from './ThemeSwitch';
 export default (props)=>{
     const [secciones, setSecciones]=useState([]);
 
+    let baseURL='https://caba-diario-backend.herokuapp.com';
+
     useEffect(
         ()=>{
-            fetch('http://localhost:8888/secciones').then(
+            fetch(`${baseURL}/secciones`).then(
                 response => response.json()
             ).then(
                 data =>{

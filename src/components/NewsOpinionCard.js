@@ -9,6 +9,8 @@ import AuthorPhoto from './AuthorPhoto';
 export default (props)=>{
     const [redirect, setRedirect]=useState(false);
 
+    let baseURL='https://caba-diario-backend.herokuapp.com';
+
     const handleDeleteClick=()=>{
         Swal.fire({
             title: '¿Está seguro que desea eliminar la nota?',
@@ -19,7 +21,7 @@ export default (props)=>{
         }).then(
             result=>{
                 if (result.value) {
-                    fetch(`http://localhost:8888/notas/${props.id}`, {
+                    fetch(`${baseURL}/notas/${props.id}`, {
                             method: 'DELETE',
                             credentials: 'include'
                     }).then(

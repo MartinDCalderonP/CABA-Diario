@@ -11,11 +11,13 @@ export default ()=>{
     const [segundoTema, setSegundoTema]=useState([]);
     const [másLeídas, setMásLeídas]=useState([]);
 
+    let baseURL='https://caba-diario-backend.herokuapp.com';
+
     useEffect(
         ()=>{
             let mounted = true;
 
-            fetch('http://localhost:8888/notas/principales').then(
+            fetch(`${baseURL}/notas/principales`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -24,7 +26,7 @@ export default ()=>{
                 }
             )
 
-            fetch('http://localhost:8888/notas/primerTema').then(
+            fetch(`${baseURL}/notas/primerTema`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -33,7 +35,7 @@ export default ()=>{
                 }
             )
 
-            fetch('http://localhost:8888/notas/primeraSeccion').then(
+            fetch(`${baseURL}/notas/primeraSeccion`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -42,7 +44,7 @@ export default ()=>{
                 }
             )
 
-            fetch('http://localhost:8888/notas/segundoTema').then(
+            fetch(`${baseURL}/notas/segundoTema`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -51,7 +53,7 @@ export default ()=>{
                 }
             )
 
-            fetch('http://localhost:8888/notas/masLeidas').then(
+            fetch(`${baseURL}/notas/masLeidas`).then(
                 response=>response.json()
             ).then(
                 data=>{
