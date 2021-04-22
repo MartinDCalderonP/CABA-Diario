@@ -63,7 +63,7 @@ function App() {
 
       <Switch>
         <Route
-          exact path='/'
+          exact path={process.env.PUBLIC_URL + '/'}
           children={
             <NewsList
               búsqueda={búsqueda}
@@ -72,7 +72,7 @@ function App() {
         />
 
         <Route
-          exact path='/Iniciar-Sesión'
+          exact path={process.env.PUBLIC_URL + '/Iniciar-Sesión'}
           children={
             <LoginPage
               handleLoginSuccess={onLoginSuccess}
@@ -81,12 +81,12 @@ function App() {
         />
 
         <Route
-          exact path='/Autores'
+          exact path={process.env.PUBLIC_URL + '/Autores'}
           children={<AuthorsList/>}
         />
 
         <Route
-          exact path={`/Autor/:id`}
+          exact path={process.env.PUBLIC_URL + `/Autor/:id`}
           children={
             <NewsList
               type='Autor'
@@ -95,12 +95,12 @@ function App() {
         />
 
         <Route
-          exact path='/:section/:title-nid:id'
+          exact path={process.env.PUBLIC_URL + '/:section/:title-nid:id'}
           children={<NewsOpinionPage />}
         />
         
         <Route
-          exact path='/Registrarse'
+          exact path={process.env.PUBLIC_URL + '/Registrarse'}
           children={
             <RegisterPage
               handleLoginSuccess={onLoginSuccess}
@@ -109,12 +109,12 @@ function App() {
         />
         
         <Route
-          exact path='/Recordar-Contraseña'
+          exact path={process.env.PUBLIC_URL + '/Recordar-Contraseña'}
           children={<RememberPassPage />}
         />
         
         <Route
-          exact path='/Sección/:title'
+          exact path={process.env.PUBLIC_URL + '/Sección/:title'}
           children={
             <NewsList
               type='Sección'
@@ -123,7 +123,7 @@ function App() {
         />
 
         <Route
-          exact path='/Tema/:title'
+          exact path={process.env.PUBLIC_URL + '/Tema/:title'}
           children={
             <NewsList
               type='Tema'
@@ -132,13 +132,13 @@ function App() {
         />
 
         <PrivateUserRoute
-          exact path='/Mi-Cuenta'
+          exact path={process.env.PUBLIC_URL + '/Mi-Cuenta'}
           children={<></>}
           user={usuario}
         />
 
         <PrivateAuthorRoute
-            exact path='/Mis-Notas'
+            exact path={process.env.PUBLIC_URL + '/Mis-Notas'}
             children={
               <NewsList
                 user={usuario}
@@ -149,7 +149,7 @@ function App() {
         />
 
         <PrivateAuthorRoute
-          exact path='/Mis-Notas/Nueva-Nota'
+          exact path={process.env.PUBLIC_URL + '/Mis-Notas/Nueva-Nota'}
           children={
             <PostEditPage
               newPost
@@ -159,7 +159,7 @@ function App() {
         />
 
         <PrivateAuthorRoute
-          exact path='/Mis-Notas/Editar-Nota/:id'
+          exact path={process.env.PUBLIC_URL + '/Mis-Notas/Editar-Nota/:id'}
           children={
             <PostEditPage
               newPost
@@ -170,7 +170,7 @@ function App() {
         />
 
         <PrivateEditorRoute
-          exact path='/Notas-a-Editar'
+          exact path={process.env.PUBLIC_URL + '/Notas-a-Editar'}
           children={
             <NewsList
               user={usuario}
@@ -181,7 +181,7 @@ function App() {
         />
 
         <PrivateEditorRoute
-          exact path='/Notas-a-Editar/:id'
+          exact path={process.env.PUBLIC_URL + '/Notas-a-Editar/:id'}
           children={
             <PostEditPage
               edit
