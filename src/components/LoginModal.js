@@ -17,10 +17,8 @@ export default (props)=>{
         setContraseña(event.target.value);
     }
 
-    let baseURL='https://caba-diario-backend.herokuapp.com';
-
     const handleLoginClick=()=>{
-        let url=`${baseURL}/auth/usuarios`;
+        let url=`https://caba-diario-backend.herokuapp.com/auth/usuarios`;
 
         let params={
             user: nombreDeUsuario,

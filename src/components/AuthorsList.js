@@ -6,11 +6,9 @@ import AuthorPhoto from './AuthorPhoto';
 export default (props)=>{
     const [autores, setAutores]=useState([]);
 
-    let baseURL='https://caba-diario-backend.herokuapp.com';
-
     useEffect(
         ()=>{
-            fetch(`${baseURL}/autores`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/autores`).then(
                 response => response.json()
             ).then(
                 data =>{

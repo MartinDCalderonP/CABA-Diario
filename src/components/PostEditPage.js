@@ -55,9 +55,7 @@ export default (props)=>{
         formData.append('Crédito_de_Imagen', créditoDeImagen);
         formData.append('Texto', texto);
 
-        let baseURL='https://caba-diario-backend.herokuapp.com';
-
-        let url=`${baseURL}/notas`;
+        let url=`https://caba-diario-backend.herokuapp.com/notas`;
 
         let method='POST';
 
@@ -98,11 +96,9 @@ export default (props)=>{
 
     let {id}=useParams();
 
-    let baseURL='https://caba-diario-backend.herokuapp.com';
-
     useEffect(
         ()=>{
-            fetch(`${baseURL}/secciones`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/secciones`).then(
                 response => response.json()
             ).then(
                 data =>{
@@ -111,7 +107,7 @@ export default (props)=>{
             )
 
             id &&
-                fetch(`${baseURL}/notas/autor/todas/` + id).then(
+                fetch(`https://caba-diario-backend.herokuapp.com/notas/autor/todas/` + id).then(
                     response=>response.json()
                 ).then(
                     data=>{

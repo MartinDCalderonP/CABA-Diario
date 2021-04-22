@@ -23,8 +23,6 @@ export default (props)=>{
     const handleRoleChange=(event)=>{
         setRol(event.target.value);
     }
-
-    let baseURL='https://caba-diario-backend.herokuapp.com';
     
     const handleLoginClick=()=>{
 
@@ -35,7 +33,7 @@ export default (props)=>{
         :
             endpoint='/editores'
         
-        let url=`${baseURL}/auth/${endpoint}`;
+        let url=`https://caba-diario-backend.herokuapp.com/auth/${endpoint}`;
 
         let params={
             user: nombre,

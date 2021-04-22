@@ -30,13 +30,11 @@ export default (props)=>{
 
     let authorUrl='';
 
-    let baseURL='https://caba-diario-backend.herokuapp.com';
-
     useEffect(
         ()=>{
             let mounted = true;
 
-            fetch(`${baseURL}/notas/posteadas/` + id).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/notas/posteadas/` + id).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -61,7 +59,7 @@ export default (props)=>{
 
         formData.append('Contador', contador);
 
-        fetch(`${baseURL}/notas/contador/` + id, {
+        fetch(`https://caba-diario-backend.herokuapp.com/notas/contador/` + id, {
             method: 'PUT',
             body: formData,
             credentials: 'include'

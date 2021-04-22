@@ -58,15 +58,13 @@ export default (props)=>{
 
     const [notas, setNotas]=useState([]);
 
-    let baseURL='https://caba-diario-backend.herokuapp.com';
-
-    let url = `${baseURL}/notas/${endpoint}`;
+    let url = `https://caba-diario-backend.herokuapp.com/notas/${endpoint}`;
 
     useEffect(
         ()=>{
             setNotas([]);
 
-            if (url !== `${baseURL}/notas/`) {
+            if (url !== `https://caba-diario-backend.herokuapp.com/notas/`) {
                 fetch(url).then(
                     response=>response.json()
                 ).then(

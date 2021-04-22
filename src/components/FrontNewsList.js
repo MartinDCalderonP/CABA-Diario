@@ -11,13 +11,11 @@ export default ()=>{
     const [segundoTema, setSegundoTema]=useState([]);
     const [másLeídas, setMásLeídas]=useState([]);
 
-    let baseURL='https://caba-diario-backend.herokuapp.com';
-
     useEffect(
         ()=>{
             let mounted = true;
 
-            fetch(`${baseURL}/notas/principales`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/notas/principales`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -26,7 +24,7 @@ export default ()=>{
                 }
             )
 
-            fetch(`${baseURL}/notas/primerTema`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/notas/primerTema`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -35,7 +33,7 @@ export default ()=>{
                 }
             )
 
-            fetch(`${baseURL}/notas/primeraSeccion`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/notas/primeraSeccion`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -44,7 +42,7 @@ export default ()=>{
                 }
             )
 
-            fetch(`${baseURL}/notas/segundoTema`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/notas/segundoTema`).then(
                 response=>response.json()
             ).then(
                 data=>{
@@ -53,7 +51,7 @@ export default ()=>{
                 }
             )
 
-            fetch(`${baseURL}/notas/masLeidas`).then(
+            fetch(`https://caba-diario-backend.herokuapp.com/notas/masLeidas`).then(
                 response=>response.json()
             ).then(
                 data=>{
