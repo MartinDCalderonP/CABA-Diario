@@ -6,6 +6,7 @@ import PrivateEditorRoute from './components/PrivateEditorRoute';
 import Swal from 'sweetalert2';
 import NavBar from './components/NavBar';
 import LoginPage from './components/LoginPage';
+import MyAccount from './components/MyAccount';
 import AuthorsList from './components/AuthorsList';
 import NewsList from './components/NewsList';
 import NewsOpinionPage from './components/NewsOpinionPage'
