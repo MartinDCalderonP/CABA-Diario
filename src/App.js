@@ -23,10 +23,8 @@ function App() {
     setUsuario(loggedUser);
   }
 
-  let baseURL='https://caba-diario-backend.herokuapp.com';
-
   const onLogout=()=>{
-    let url=`${baseURL}/auth`;
+    let url=`https://caba-diario-backend.herokuapp.com/auth`;
 
     fetch(url, {
       method: 'DELETE',
@@ -135,7 +133,7 @@ function App() {
 
         <PrivateUserRoute
           exact path='/Mi-Cuenta'
-          children={<></>}
+          children={<MyAccount/>}
           user={usuario}
         />
 

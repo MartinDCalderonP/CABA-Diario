@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useParams} from 'react-router-dom';
-import {Row, Col, Chip, Preloader} from 'react-materialize';
+import {Row, Col, Preloader} from 'react-materialize';
+// Chip ^
 import moment from 'moment';
 import ReactHtmlParser from 'react-html-parser';
 import AuthorPhoto from './AuthorPhoto';
-import SocialIcons from './SocialIcons';
-/* import NewsRow from './NewsRow';
-import NewsOpinionCard from './NewsOpinionCard';
- */
+// import SocialIcons from './SocialIcons';
+// import NewsRow from './NewsRow';
+// import NewsOpinionCard from './NewsOpinionCard';
+
 export default (props)=>{
     require('moment/locale/es.js');
 
@@ -138,34 +139,34 @@ export default (props)=>{
         fontSize: '1.35rem'
     }
 
-    let shareDivStyle={
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        marginBottom: '10px',
-        borderTop: '1px solid var(--transparentDarkBlue)',
-        borderBottom: '1px solid var(--transparentDarkBlue)'
-    }
+    // let shareDivStyle={
+    //     display: 'flex',
+    //     flexWrap: 'wrap',
+    //     alignItems: 'center',
+    //     marginBottom: '10px',
+    //     borderTop: '1px solid var(--transparentDarkBlue)',
+    //     borderBottom: '1px solid var(--transparentDarkBlue)'
+    // }
 
-    let shareTextStyle={
-        fontSize: '1.25rem'
-    }
+    // let shareTextStyle={
+    //     fontSize: '1.25rem'
+    // }
 
-    let socialIconsStyle={
-        margin: '0px'
-    }
+    // let socialIconsStyle={
+    //     margin: '0px'
+    // }
 
-    let topicsDivStyle={
-        marginBottom: '10px',
-        borderBottom: '1px solid var(--transparentDarkBlue)',
-        paddingBottom: '5px'
-    }
+    // let topicsDivStyle={
+    //     marginBottom: '10px',
+    //     borderBottom: '1px solid var(--transparentDarkBlue)',
+    //     paddingBottom: '5px'
+    // }
 
-/*     let relatedColStyle={
-        borderLeft: '1px solid var(--transparentDarkBlue)',
-        paddingLeft: '20px'
-    }
- */
+    // let relatedColStyle={
+    //     borderLeft: '1px solid var(--transparentDarkBlue)',
+    //     paddingLeft: '20px'
+    // }
+
     let preloaderDivStyle={
         marginTop: '20px',
         textAlign: 'center'
@@ -283,7 +284,7 @@ export default (props)=>{
                                     {ReactHtmlParser(nota.Nota_Texto)}
                                 </div>
 
-                                <div
+                                {/* <div
                                     style={shareDivStyle}
                                 >
                                     <p
@@ -307,7 +308,7 @@ export default (props)=>{
                                     <Chip close={false} options={null}>Tema 3</Chip>
                                     <Chip close={false} options={null}>Tema 4</Chip>
                                     <Chip close={false} options={null}>Tema 5</Chip>
-                                </div>
+                                </div> */}
                             </Col>
 
                             {/* <Col

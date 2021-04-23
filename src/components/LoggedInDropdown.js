@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Dropdown} from 'react-materialize';
-import DefaultPhoto from '../images/usersPhotos/default.png';
+import DefaultPhoto from '../images/defaultPhoto.png';
 
 export default (props)=>{
     let triggerStyle={

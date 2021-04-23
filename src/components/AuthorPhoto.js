@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultPhoto from '../images/authorsPhotos/default.png';
+import DefaultPhoto from '../images/defaultPhoto.png';
 
 export default (props)=>{
     let autorPhotoStyle={
