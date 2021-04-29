@@ -88,7 +88,7 @@ export default (props)=>{
             }
         ).catch(
             error => {
-                console.log('Error');
+                console.log('Error:', error);
         });
     }
 
