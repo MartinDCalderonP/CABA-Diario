@@ -137,7 +137,7 @@ export default (props)=>{
                     />
                 </div>
 
-                <p>
+                {/* <p>
                     <Link
                         to='/Recordar-Contraseña'
                         className='modal-close'
@@ -145,7 +145,7 @@ export default (props)=>{
                     >
                         ¿Olvidaste tu contraseña?
                     </Link>
-                </p>
+                </p> */}
 
                 <p>
                     <Link

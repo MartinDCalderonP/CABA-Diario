@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
+//Link ^
 import {TextInput, Select} from 'react-materialize';
 import Swal from 'sweetalert2';
 import FormPage from './FormPage';
@@ -70,10 +71,10 @@ export default (props)=>{
         )
     }
 
-    let pStyle={
-        marginTop: '25px',
-        textDecoration: 'underline'
-    }
+    // let pStyle={
+    //     marginTop: '25px',
+    //     textDecoration: 'underline'
+    // }
 
     return(
         !redirect ?
@@ -140,7 +141,8 @@ export default (props)=>{
                             Editor de Sección
                         </option>
                     </Select>
-                    <p
+
+                    {/* <p
                         style={pStyle}
                     >
                         <Link
@@ -148,7 +150,7 @@ export default (props)=>{
                         >
                             ¿Olvidaste tu contraseña?
                         </Link>
-                    </p>
+                    </p> */}
 
                     <ThisButton
                         onClick={handleLoginClick}
