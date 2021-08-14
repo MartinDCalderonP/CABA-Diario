@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CABA Diario
 
-## Available Scripts
+CABA Diario is a newspaper website made in React with React-Materialize. The name comes from the Ciudad Autónoma de Buenos Aires acronym. The styles are on JavaScript, it is responsive and is deployed on Netlify: [https://caba-diario.netlify.app/](https://caba-diario.netlify.app/). It has a backend made in NodeJS, Express and a SQL database deployed on Heroku that it has here own repo: [https://github.com/MartinDCalderonP/CABA-Diario-Backend](https://github.com/MartinDCalderonP/CABA-Diario-Backend).
 
-In the project directory, you can run:
+# Things that are working now
 
-### `npm start`
+Home Page shows the latest news in database ordered by most important sections and more readed news. It has a bar connected to an API that brings the two principal dollar prices here in Argentina. One can access the news as well as the sections pages to which they belong and the authors pages. The header of the Home Pase has a search input to search between the news (for now it only works on home page). The sidebar has the authors page, the sections that exists on the database and the theme switcher. One can login but can't register (because there is an error), but for now only shows the user avatar. The login for the authors works but is hidden route for the common users. Here the author can create, update, delete the news that it belongs to him.
+The News Page shows the selected news and his details. The Author and the Section Page shows the news that belongs to the author (with an avatar and a bio) or the section selected.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Next things to add to the project
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Fix register.
 
-### `npm test`
+Reorder files.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Search not only on Home Page.
 
-### `npm run build`
+Site from all the dollar prices.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+And a lot more of stuff.
