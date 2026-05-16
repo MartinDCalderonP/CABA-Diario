@@ -1,0 +1,61 @@
+.container {
+  width: 100%;
+}
+
+.item {
+  padding: 8px 8px 8px 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.3s;
+}
+
+.item:hover {
+  background-color: rgba(0, 0, 139, 0.1);
+}
+
+.text {
+  font-size: 1.5rem;
+  color: var(--colorLetras);
+  margin: 0;
+}
+
+/* Custom switch styling */
+.switch {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 40px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.switch:checked {
+  background-color: #4caf50;
+}
+
+.switch::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s;
+}
+
+.switch:checked::before {
+  left: 18px;
+}
+
+.switch:focus {
+  outline: 2px solid rgba(0, 0, 139, 0.3);
+  outline-offset: 2px;
+}

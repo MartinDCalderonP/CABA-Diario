@@ -1,0 +1,17 @@
+/* eslint-disable react/function-component-definition, react/prop-types */
+import React from 'react'
+import styles from './styles.module.css'
+
+function CloseCross(props) {
+  return (
+    <a
+      className={`${styles.closeLink} ${props.className || ''}`}
+      href='#!'
+      onClick={props.onClick}
+    >
+      <span className={styles.closeIcon}>✕</span>
+    </a>
+  )
+}
+
+export default CloseCross

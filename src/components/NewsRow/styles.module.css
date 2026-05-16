@@ -1,0 +1,11 @@
+.newsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+  gap: 10px;
+}
+
+.mostRead {
+  /* Additional styling for most read section */
+}

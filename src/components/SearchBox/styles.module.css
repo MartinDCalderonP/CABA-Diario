@@ -1,0 +1,19 @@
+.input {
+  background-color: var(--colorFondo);
+  color: var(--colorLetras);
+  border: 1px solid var(--transparentDarkBlue);
+  border-radius: 2.5px;
+  padding: 8px 12px;
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: var(--transparentDarkBlue);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 139, 0.2);
+}

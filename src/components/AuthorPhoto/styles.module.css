@@ -1,0 +1,8 @@
+.autorPhoto {
+  display: block;
+  margin: 0px;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid var(--transparentDarkBlue);
+  border-radius: 50%;
+}

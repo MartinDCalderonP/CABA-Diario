@@ -1,0 +1,78 @@
+.navbar {
+  background-color: var(--colorFondo);
+  height: 65px;
+  border-bottom: 2px solid var(--transparentDarkBlue);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: var(--colorLetras);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  display: none;
+  transition: 0.2s;
+}
+
+.menuButton:hover {
+  opacity: 0.7;
+}
+
+@media (min-width: 601px) {
+  .menuButton {
+    display: block;
+  }
+}
+
+.searchDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchToggle {
+  color: var(--colorLetras);
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.searchToggle:hover {
+  opacity: 0.7;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navContent {
+    flex-wrap: wrap;
+  }
+}

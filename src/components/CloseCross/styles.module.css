@@ -1,0 +1,16 @@
+.closeLink {
+  margin: 15px;
+  color: var(--colorLetras);
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.closeIcon {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.closeLink:hover .closeIcon {
+  opacity: 0.7;
+}

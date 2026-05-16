@@ -1,0 +1,22 @@
+.header {
+  margin: 15px 0px 15px;
+  border-bottom: 1px solid rgba(0, 0, 139, 0.4);
+}
+
+.headerTitle {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 0px 0px -1px;
+  border-bottom: 1px solid var(--colorLetras);
+  padding-bottom: 0.3125rem;
+}
+
+.headerTitle a {
+  color: var(--colorLetras);
+  text-decoration: none;
+}
+
+.headerTitle a:hover {
+  opacity: 0.8;
+}

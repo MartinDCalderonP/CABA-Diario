@@ -1,60 +1,60 @@
-import React, {useState} from 'react';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
-import PrivateUserRoute from './components/PrivateUserRoute';
-import PrivateAuthorRoute from './components/PrivateAuthorRoute';
-import PrivateEditorRoute from './components/PrivateEditorRoute';
-import Swal from 'sweetalert2';
-import NavBar from './components/NavBar';
-import LoginPage from './components/LoginPage';
-import MyAccount from './components/MyAccount';
-import AuthorsList from './components/AuthorsList';
-import NewsList from './components/NewsList';
-import NewsOpinionPage from './components/NewsOpinionPage'
-import PostEditPage from './components/PostEditPage';
-import RegisterPage from './components/RegisterPage';
-import RememberPassPage from './components/RememberPassPage';
-import Footer from './components/Footer';
+import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom'
+import PrivateUserRoute from './components/PrivateUserRoute/index'
+import PrivateAuthorRoute from './components/PrivateAuthorRoute/index'
+import PrivateEditorRoute from './components/PrivateEditorRoute/index'
+import Swal from 'sweetalert2'
+import NavBar from './components/NavBar/index'
+import LoginPage from './components/LoginPage/index'
+import MyAccount from './components/MyAccount/index'
+import AuthorsList from './components/AuthorsList/index'
+import NewsList from './components/NewsList/index'
+import NewsOpinionPage from './components/NewsOpinionPage/index'
+import PostEditPage from './components/PostEditPage/index'
+import RegisterPage from './components/RegisterPage/index'
+import RememberPassPage from './components/RememberPassPage/index'
+import Footer from './components/Footer/index'
 
 function App() {
+  const [usuario, setUsuario] = useState(null)
+  const [búsqueda, setBúsqueda] = useState(null)
 
-  const [usuario, setUsuario] = useState(null);
-  const [búsqueda, setBúsqueda] = useState(null);
-
-  const onLoginSuccess=(loggedUser)=>{
-    setUsuario(loggedUser);
+  const onLoginSuccess = (loggedUser) => {
+    setUsuario(loggedUser)
   }
 
-  const onLogout=()=>{
-    let url=`https://caba-diario-backend.herokuapp.com/auth`;
+  const onLogout = () => {
+    let url = `https://caba-diario-backend.herokuapp.com/auth`
 
     fetch(url, {
       method: 'DELETE',
       credentials: 'include'
-    }).then(
-      response=>response.json()
-    ).then(
-      data=>{
-        setUsuario(null);
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUsuario(null)
         Swal.fire({
           text: data.message,
           icon: 'success'
         })
-      }
-    )
+      })
   }
 
-  const onSearch=(término)=>{
-    if (término==='') {
-      término=null;
+  const onSearch = (término) => {
+    if (término === '') {
+      término = null
     }
 
-    setBúsqueda(término);
+    setBúsqueda(término)
   }
 
   return (
-    <Router
-      basename={process.env.PUBLIC_URL}
-    >
+    <Router basename={process.env.PUBLIC_URL}>
       <NavBar
         user={usuario}
         handleLoginSuccess={onLoginSuccess}
@@ -63,138 +63,89 @@ function App() {
       />
 
       <Switch>
-        <Route
-          exact path='/'
-          children={
-            <NewsList
-              búsqueda={búsqueda}
-            />
-          }
-        />
+        <Route exact path='/' children={<NewsList búsqueda={búsqueda} />} />
 
         <Route
-          exact path='/Iniciar-Sesión'
-          children={
-            <LoginPage
-              handleLoginSuccess={onLoginSuccess}
-            />
-          }
+          exact
+          path='/Iniciar-Sesión'
+          children={<LoginPage handleLoginSuccess={onLoginSuccess} />}
         />
 
-        <Route
-          exact path='/Autores'
-          children={<AuthorsList/>}
-        />
+        <Route exact path='/Autores' children={<AuthorsList />} />
+
+        <Route exact path={`/Autor/:id`} children={<NewsList type='Autor' />} />
 
         <Route
-          exact path={`/Autor/:id`}
-          children={
-            <NewsList
-              type='Autor'
-            />
-          }
-        />
-
-        <Route
-          exact path='/:section/:title-nid:id'
+          exact
+          path='/:section/:title-nid:id'
           children={<NewsOpinionPage />}
         />
-        
+
         <Route
-          exact path='/Registrarse'
-          children={
-            <RegisterPage
-              handleLoginSuccess={onLoginSuccess}
-            />
-          }
+          exact
+          path='/Registrarse'
+          children={<RegisterPage handleLoginSuccess={onLoginSuccess} />}
         />
-        
+
         <Route
-          exact path='/Recordar-Contraseña'
+          exact
+          path='/Recordar-Contraseña'
           children={<RememberPassPage />}
         />
-        
-        <Route
-          exact path='/Sección/:title'
-          children={
-            <NewsList
-              type='Sección'
-            />
-          }
-        />
 
         <Route
-          exact path='/Tema/:title'
-          children={
-            <NewsList
-              type='Tema'
-            />
-          }
+          exact
+          path='/Sección/:title'
+          children={<NewsList type='Sección' />}
         />
+
+        <Route exact path='/Tema/:title' children={<NewsList type='Tema' />} />
 
         <PrivateUserRoute
-          exact path='/Mi-Cuenta'
-          children={<MyAccount/>}
+          exact
+          path='/Mi-Cuenta'
+          children={<MyAccount />}
           user={usuario}
         />
 
         <PrivateAuthorRoute
-            exact path='/Mis-Notas'
-            children={
-              <NewsList
-                user={usuario}
-                type='Mis Notas'
-              />
-            }
-            user={usuario}
-        />
-
-        <PrivateAuthorRoute
-          exact path='/Mis-Notas/Nueva-Nota'
-          children={
-            <PostEditPage
-              newPost
-            />
-          }
+          exact
+          path='/Mis-Notas'
+          children={<NewsList user={usuario} type='Mis Notas' />}
           user={usuario}
         />
 
         <PrivateAuthorRoute
-          exact path='/Mis-Notas/Editar-Nota/:id'
-          children={
-            <PostEditPage
-              newPost
-              edit
-            />
-          }
+          exact
+          path='/Mis-Notas/Nueva-Nota'
+          children={<PostEditPage newPost />}
+          user={usuario}
+        />
+
+        <PrivateAuthorRoute
+          exact
+          path='/Mis-Notas/Editar-Nota/:id'
+          children={<PostEditPage newPost edit />}
           user={usuario}
         />
 
         <PrivateEditorRoute
-          exact path='/Notas-a-Editar'
-          children={
-            <NewsList
-              user={usuario}
-              type='Notas a Editar'
-            />
-          }
+          exact
+          path='/Notas-a-Editar'
+          children={<NewsList user={usuario} type='Notas a Editar' />}
           user={usuario}
         />
 
         <PrivateEditorRoute
-          exact path='/Notas-a-Editar/:id'
-          children={
-            <PostEditPage
-              edit
-            />
-          }
+          exact
+          path='/Notas-a-Editar/:id'
+          children={<PostEditPage edit />}
           user={usuario}
         />
 
-        <Redirect to={{pathname:'/'}}/>
-        
+        <Redirect to={{ pathname: '/' }} />
       </Switch>
-      
+
       <Footer />
 
       <style>
@@ -402,7 +353,7 @@ function App() {
         `}
       </style>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

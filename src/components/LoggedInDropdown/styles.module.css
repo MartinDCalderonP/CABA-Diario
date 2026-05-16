@@ -1,0 +1,63 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--colorLetras);
+  margin: 0px 18px;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+}
+
+.image:hover {
+  opacity: 0.8;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--colorFondo);
+  border: 1px solid var(--transparentDarkBlue);
+  border-radius: 4px;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.menuItem {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--colorLetras);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+}
+
+.menuItem:hover {
+  background-color: rgba(0, 0, 139, 0.1);
+}
+
+.logout {
+  border-top: 1px solid var(--transparentDarkBlue);
+}

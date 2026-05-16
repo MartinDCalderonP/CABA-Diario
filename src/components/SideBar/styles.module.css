@@ -1,0 +1,118 @@
+.sidenav {
+  background-color: var(--colorFondo);
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  top: 65px;
+  left: -300px;
+  overflow-y: auto;
+  z-index: 99;
+  transition: left 0.3s ease;
+  border-right: 1px solid var(--transparentDarkBlue);
+}
+
+.sidenavOpen {
+  left: 0;
+}
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.closeButton {
+  margin-left: auto;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--transparentDarkBlue);
+  margin: 10px 0;
+}
+
+.search {
+  padding: 10px;
+}
+
+.menuItem {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--colorLetras);
+  transition: 0.3s;
+  margin: 0;
+  padding: 8px 8px 8px 30px;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  padding-left: 40px;
+  color: var(--colorLetras);
+}
+
+.sectionsContainer {
+  padding: 10px 0;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  color: var(--colorLetras);
+  padding: 0 30px;
+  margin: 15px 0;
+}
+
+.collapsible {
+  padding: 0;
+}
+
+.collapsibleHeader {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--colorLetras);
+  transition: 0.3s;
+  margin-bottom: -8px;
+  padding-left: 14px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 14px;
+}
+
+.collapsibleHeader:hover {
+  background-color: rgba(0, 0, 139, 0.1);
+}
+
+.collapsibleBody {
+  padding-left: 40px;
+  background-color: rgba(0, 0, 139, 0.05);
+}
+
+.sectionLink,
+.themeLink {
+  display: block;
+  margin: 10px 0;
+  margin-left: 0;
+  padding-left: 40px;
+  color: var(--colorLetras);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sectionLink:hover,
+.themeLink:hover {
+  padding-left: 50px;
+  color: var(--colorLetras);
+}
+
+@media (max-width: 600px) {
+  .sidenav {
+    width: 100%;
+    left: -100%;
+  }
+
+  .sidenavOpen {
+    left: 0;
+  }
+}

@@ -1,0 +1,27 @@
+.button {
+  background-color: var(--colorFondo);
+  color: var(--colorLetras);
+  width: 240px;
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  margin: 10px 10px 0px;
+  border: 1px solid var(--transparentDarkBlue);
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 139, 0.2);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
