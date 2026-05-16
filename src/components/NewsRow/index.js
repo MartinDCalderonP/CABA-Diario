@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import RowHeader from '../RowHeader/index'
 import styles from './styles.module.css'

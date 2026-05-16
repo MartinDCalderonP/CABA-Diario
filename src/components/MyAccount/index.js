@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition */
 import React from 'react'
 import UnderConstruction from '../../images/underConstruction.png'
 import styles from './styles.module.css'

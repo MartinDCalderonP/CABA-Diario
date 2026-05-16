@@ -1,4 +1,3 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
 import React from 'react'
 import LogoLight from '../LogoLight/index'
 import SocialIcons from '../SocialIcons/index'

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import DefaultPhoto from '../../images/defaultPhoto.png'
 import styles from './styles.module.css'
