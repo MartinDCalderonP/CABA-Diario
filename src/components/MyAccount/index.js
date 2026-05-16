@@ -3,7 +3,7 @@ import React from 'react'
 import UnderConstruction from '../../images/underConstruction.png'
 import styles from './styles.module.css'
 
-function MyAccount() {
+const MyAccount = () => {
   return (
     <div className={styles.container}>
       <img

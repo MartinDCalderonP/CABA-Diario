@@ -1,9 +1,9 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../images/logos/logoLight.png'
 
-function LogoLight(props) {
+const LogoLight = (props) => {
   return (
     <Link
       to='/'

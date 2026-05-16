@@ -1,8 +1,8 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import styles from './styles.module.css'
 
-function ThisButton(props) {
+const ThisButton = (props) => {
   return (
     <button
       type='button'

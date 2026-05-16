@@ -1,4 +1,4 @@
-/* eslint-disable react/function-component-definition, react/prop-types, no-negated-condition */
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import Swal from 'sweetalert2'
@@ -6,7 +6,7 @@ import FormPage from '../FormPage/index'
 import ThisButton from '../ThisButton/index'
 import styles from './styles.module.css'
 
-function RegisterPage(props) {
+const RegisterPage = (props) => {
   const [redirect, setRedirect] = useState(false)
 
   const [nombreDeUsuario, setNombreDeUsuario] = useState('')

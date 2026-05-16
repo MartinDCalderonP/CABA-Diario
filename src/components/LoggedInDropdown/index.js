@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import DefaultPhoto from '../../images/defaultPhoto.png'
 import styles from './styles.module.css'
 
-function LoggedInDropdown(props) {
+const LoggedInDropdown = (props) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDropdown = () => {

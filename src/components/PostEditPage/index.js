@@ -2,7 +2,7 @@ import React from 'react'
 import FormPage from '../FormPage/index'
 import styles from './styles.module.css'
 
-function PostEditPage() {
+const PostEditPage = () => {
   return (
     <div className={styles.container}>
       <FormPage title='Editar Nota'>

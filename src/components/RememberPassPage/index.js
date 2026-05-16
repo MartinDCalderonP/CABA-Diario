@@ -4,7 +4,7 @@ import FormPage from '../FormPage/index'
 import ThisButton from '../ThisButton/index'
 import styles from './styles.module.css'
 
-function RememberPassPage() {
+const RememberPassPage = () => {
   return (
     <FormPage title='Recordar contraseña'>
       <div className={styles.formGroup}>

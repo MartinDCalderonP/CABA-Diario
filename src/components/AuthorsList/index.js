@@ -1,10 +1,10 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AuthorPhoto from '../AuthorPhoto/index'
 import styles from './styles.module.css'
 
-function AuthorsList(props) {
+const AuthorsList = (props) => {
   const [autores, setAutores] = useState([])
 
   useEffect(() => {

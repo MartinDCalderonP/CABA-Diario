@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 import ThisButton from '../ThisButton/index'
 import styles from './styles.module.css'
 
-function LoginModal(props) {
+const LoginModal = (props) => {
   const [nombreDeUsuario, setNombreDeUsuario] = useState('')
   const [contraseña, setContraseña] = useState('')
   const [isOpen, setIsOpen] = useState(false)

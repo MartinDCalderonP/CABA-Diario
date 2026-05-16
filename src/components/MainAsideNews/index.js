@@ -1,9 +1,9 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import RowHeader from '../RowHeader/index'
 import styles from './styles.module.css'
 
-function MainAsideNews(props) {
+const MainAsideNews = (props) => {
   return (
     <>
       {props.headerTitle && (

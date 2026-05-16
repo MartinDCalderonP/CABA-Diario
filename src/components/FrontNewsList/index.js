@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-export default () => {
+const FrontNewsList = () => {
   return (
     <div className={styles.preloader}>
       <div className={styles.spinner} />
@@ -9,3 +9,5 @@ export default () => {
     </div>
   )
 }
+
+export default FrontNewsList

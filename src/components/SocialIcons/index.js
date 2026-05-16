@@ -1,4 +1,4 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import styles from './styles.module.css'
 
-function SocialIcons(props) {
+const SocialIcons = (props) => {
   return (
     <div className={styles.container} style={props.style}>
       {props.facebook && (

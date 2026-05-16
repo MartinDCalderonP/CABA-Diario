@@ -6,7 +6,7 @@ import SearchBox from '../SearchBox/index'
 import ThemeSwitch from '../ThemeSwitch/index'
 import styles from './styles.module.css'
 
-export default (props) => {
+const SideBar = (props) => {
   const [secciones, setSecciones] = useState([])
   const [expandedSection, setExpandedSection] = useState(null)
 
@@ -97,3 +97,5 @@ export default (props) => {
     </div>
   )
 }
+
+export default SideBar

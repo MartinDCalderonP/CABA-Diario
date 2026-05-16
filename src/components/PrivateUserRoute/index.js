@@ -1,8 +1,8 @@
-/* eslint-disable react/function-component-definition, react/prop-types */
+/* eslint-disable react/prop-types */
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
-function PrivateUserRoute(props) {
+const PrivateUserRoute = (props) => {
   if (props.user?.role === 'Usuario') {
     return <Route {...props} />
   }

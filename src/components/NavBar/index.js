@@ -5,7 +5,7 @@ import LoginModal from '../LoginModal/index'
 import LoggedInDropdown from '../LoggedInDropdown/index'
 import styles from './styles.module.css'
 
-function NavBar(props) {
+const NavBar = (props) => {
   const [showSB, setShowSB] = useState(false)
 
   const showSearchBox = () => {

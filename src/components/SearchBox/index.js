@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 
-function SearchBox(props) {
+const SearchBox = (props) => {
   const [término, setTérmino] = useState('')
 
   const handleTérminoChange = (event) => {

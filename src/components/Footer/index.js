@@ -4,7 +4,7 @@ import LogoLight from '../LogoLight/index'
 import SocialIcons from '../SocialIcons/index'
 import styles from './styles.module.css'
 
-function Footer() {
+const Footer = () => {
   return (
     <div className={styles.footer}>
       <LogoLight />

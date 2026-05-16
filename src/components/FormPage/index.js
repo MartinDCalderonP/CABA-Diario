@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-function FormPage(props) {
+const FormPage = (props) => {
   return (
     <>
       <div className={styles.formPage}>

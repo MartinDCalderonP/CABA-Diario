@@ -1,4 +1,4 @@
-/* eslint-disable react/function-component-definition, react/prop-types, no-negated-condition */
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import Swal from 'sweetalert2'
@@ -8,7 +8,7 @@ import AuthorPhoto from '../AuthorPhoto/index'
 import ThisButton from '../ThisButton/index'
 import styles from './styles.module.css'
 
-function NewsOpinionCard(props) {
+const NewsOpinionCard = (props) => {
   const [redirect, setRedirect] = useState(false)
 
   const handleDeleteClick = () => {

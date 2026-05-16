@@ -5,7 +5,7 @@ import LogoLight from '../../images/logos/logoLight.png'
 import LogoDark from '../../images/logos/logoDark.png'
 import styles from './styles.module.css'
 
-export default () => {
+const ThemeSwitch = () => {
   useEffect(() => {
     const currentTheme = localStorage.getItem('theme')
 
@@ -66,3 +66,5 @@ export default () => {
     </div>
   )
 }
+
+export default ThemeSwitch
