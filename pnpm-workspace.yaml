@@ -19,14 +19,27 @@ minimumReleaseAgeExclude:
   - decode-uri-component@0.5.0
   - qs@6.16.0
   - qs@6.16.0
-  - colord@2.9.4
-  - js-yaml@3.15.2
   - svgo@2.8.4
+  - webpack-dev-middleware@7.4.5
+  - fast-uri@3.1.8
+  - moment@2.31.0
+  - brace-expansion@1.1.21
+  - brace-expansion@2.1.7
+  - brace-expansion@1.1.20
+  - brace-expansion@2.1.6
+  - brace-expansion@1.1.19
+  - brace-expansion@2.1.5
 overrides:
   '@tootallnate/once@<2.0.1': ^2.0.1
-  colord@<2.9.4: ^2.9.4
+  brace-expansion@<1.1.19: ^1.1.19
+  brace-expansion@<1.1.20: ^1.1.20
+  brace-expansion@<1.1.21: ^1.1.21
+  brace-expansion@>=2.0.0 <2.1.5: ^2.1.5
+  brace-expansion@>=2.0.0 <2.1.6: ^2.1.6
+  brace-expansion@>=2.0.0 <2.1.7: ^2.1.7
   decode-uri-component@<=0.4.2: ^0.5.0
-  js-yaml@>=3.0.0 <3.15.2: ^3.15.2
+  fast-uri@>=3.0.0 <3.1.8: ^3.1.8
+  moment@>=2.29.2 <2.31.0: ^2.31.0
   nth-check@<2.0.1: ^2.0.1
   postcss@<7.0.36: ^7.0.36
   postcss@<8.4.31: ^8.4.31
@@ -42,6 +55,7 @@ overrides:
   svgo@>=1.0.0 <2.8.4: ^2.8.4
   underscore@<=1.13.7: ^1.13.8
   uuid@<11.1.1: ^11.1.1
+  webpack-dev-middleware@<7.4.5: ^7.4.5
   webpack-dev-server@<5.2.5: ^5.2.5
   webpack-dev-server@<=5.2.0: ^5.2.1
   webpack-dev-server@<=5.2.3: ^5.2.4
