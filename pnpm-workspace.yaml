@@ -1,3 +1,11 @@
+allowBuilds:
+  '@fortawesome/fontawesome-common-types': true
+  '@fortawesome/fontawesome-svg-core': true
+  '@fortawesome/free-brands-svg-icons': true
+  '@fortawesome/free-solid-svg-icons': true
+  core-js: true
+  core-js-pure: true
+  fsevents: true
 minimumReleaseAgeExclude:
   - postcss@7.0.36
   - nth-check@2.0.1
@@ -37,10 +45,13 @@ overrides:
   brace-expansion@>=2.0.0 <2.1.5: ^2.1.5
   brace-expansion@>=2.0.0 <2.1.6: ^2.1.6
   brace-expansion@>=2.0.0 <2.1.7: ^2.1.7
+  braces@<3.0.3: ^3.0.3
   decode-uri-component@<=0.4.2: ^0.5.0
   fast-uri@>=3.0.0 <3.1.8: ^3.1.8
+  micromatch@<4.0.8: ^4.0.8
   moment@>=2.29.2 <2.31.0: ^2.31.0
   nth-check@<2.0.1: ^2.0.1
+  postcss-selector-parser@<7.1.6: ^7.1.6
   postcss@<7.0.36: ^7.0.36
   postcss@<8.4.31: ^8.4.31
   postcss@<8.5.10: ^8.5.10
@@ -51,6 +62,8 @@ overrides:
   qs@>=6.14.2 <=6.15.3: ^6.15.4
   serialize-javascript@<=7.0.2: ^7.0.3
   serialize-javascript@>=5.0.0 <7.0.5: ^7.0.5
+  shell-quote@>=1.8.4 <1.11.0: ^1.11.0
+  source-map-js@>=1.0.0 <1.2.2: ^1.2.2
   svgo@>=1.0.0 <2.8.3: ^2.8.3
   svgo@>=1.0.0 <2.8.4: ^2.8.4
   underscore@<=1.13.7: ^1.13.8
